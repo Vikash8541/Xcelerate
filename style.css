@@ -1,0 +1,820 @@
+/* Font Montserrat */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600&family=Poppins:wght@100;200;300;400;500;600&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+
+/* Universal declaration */
+
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*========================= global properties declaration work start =========================*/
+:root{
+    --white: #fff;
+    --yellow: #DCA827;
+    --dark-grey: #222;
+    --black: #000;
+    --p: #444444;
+    --cart:#0000001A;
+
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.wrapper{
+    overflow: hidden !important;
+}
+section{
+    overflow-x: hidden !important;
+}
+a{
+    text-decoration: none !important;
+}
+img{
+    max-width: 100% !important;
+    height: auto;
+    object-fit: cover;
+}
+ul{
+    margin: 0;
+}
+
+/* ======= Lines for Everywhere ============ */
+.lines{
+    position: relative;
+}
+.lines::after{
+    content: '';
+    position: absolute;
+    background-color: var(--white);
+    height: 1px;
+    width: 15px;
+    right: -33px;
+    top: 50%;
+    transform: rotate(90deg)  translateY(-50%);
+}
+/* ======= Lines for Everywhere ============ */
+
+/*======================= global properties declaration work end ======================*/
+
+/* ====================================== Navigation work start=============================== */
+header{
+    background-color: var(--white);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    z-index: 999 !important;
+    box-shadow: -1px 1px 23px -7px rgba(0,0,0,0.57);
+    transition: all 0.5s ease;
+}
+.nav-task,.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-links{
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+}
+.nav-links li{
+    position: relative;
+
+}
+.nav-links li .line::after{
+    content: '';
+    position: absolute;
+    background-color: var(--dark-grey);
+    height: 1px;
+    width: 15px;
+    right: -33px;
+    top: 50%;
+    transform: rotate(90deg) translateY(-50%);
+}
+.nav-links li a{
+    font-size: 15px;
+    text-transform: uppercase;
+    color: var(--p);
+    font-weight: 430;
+    transition: color 0.5s ease;
+}
+.nav-links li a:hover{
+    color: var(--yellow);
+}
+.toggle-btn{
+    all: unset;
+    display: none;
+}
+.cart-btn{
+    background-color: var(--yellow);
+    padding: .7rem 1rem;
+    font-weight: 500 !important;
+    transition: color 0.5s ease;
+}
+.cart-btn:hover{
+    color: var(--white) !important;
+}
+.cart-btn img{
+    background-color: var(--dark-grey);
+    color: var(--yellow);
+    padding: 5px;
+}
+/* Active Status */
+.nav-links li a.active{
+    color: var(--yellow);
+}
+
+/* ====================================== Navigation work end=============================== */
+
+/* ====================================== Banner work start=============================== */
+.banner{
+    background:linear-gradient(0deg, rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(./img/banner.png) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 200px 0;
+}
+
+.text-banner{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.text-banner h4,.text-banner h5{
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--yellow);
+}
+.text-banner h5,.text-banner h3{
+    color: var(--white);
+}
+.text-banner h3{
+     font-weight: 400;
+    text-transform: uppercase;
+    font-size: clamp(1.7rem , 6vw, 2.2rem);
+}
+.money-back{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 55px;
+    border-top: 1px solid var(--white) ;
+    border-bottom: 1px solid var(--white) ;
+    padding: .8rem 0;
+    margin: 1rem 0 ;
+}
+.money-back-line::after{
+    height: .5px;
+    width: 50px;
+    right: -60px;
+}
+.money-back h5{
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-size: 15px;
+}
+.shop-now-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--black);
+    font-weight: 300;
+    font-size: 15px;
+    padding: 0.7rem 1rem;
+    transition: color 0.5s ease;
+}
+.shop-now-btn:hover{
+    color: var(--white);
+}
+.shop-now-btn i{
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 12px;
+    padding: 9px;
+}
+/* ====================================== Banner work end=============================== */
+
+/* ====================================== project work start=============================== */
+.product-banner{
+    background-color: var(--white);
+    padding: 50px 0 ;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+.product-banner::before{
+    content: '';
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    background: url(./img/our-product-bg.png) no-repeat left;
+    background-size: cover;
+}
+.product-head{
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+}
+.services{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.layer-text{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 50px;
+}
+.service-line{
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: #D9D9D9;
+}
+.service-line .yellow{
+    position: absolute;
+    left: 0;
+    top: -2px;
+    height: 4px;
+    width: 150px;
+    border-radius: 20px;
+    background-color: var(--yellow);
+}
+.layer-ser {
+    display: flex;
+}
+.layer-ser a{
+    margin-bottom: 0;
+    color: var(--p);
+    font-weight: 400;
+}
+.layer-ser::after{
+    background-color: var(--p);
+    right: -18px;
+}
+
+.box-product{
+    background-color: var(--white);
+    padding: 2rem 1rem;
+}
+.box-item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 470px;
+    width: auto;
+    box-shadow: 1px 5px 33px -60px rgba(0,0,0,0.3);
+}
+.box-item h4,.box-item p,.box-item h4,.price h6, .price p{
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.img-product{
+    width: 100px;
+    height: auto;
+}
+.box-item h4{
+    font-size: clamp(1rem , 6vw, 1.3rem);
+    color: var(--dark-grey);
+}
+.box-item p{
+    color: var(--p);
+}
+.price{
+    margin-top: 10px;
+}
+.price h6{
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--yellow);
+}
+.price p{
+    font-size: 14px;
+    color: var(--p);
+}
+.text-product{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.carousel-product{
+    margin-bottom: 3rem;
+}
+.add-cart-btn{
+    padding: 1rem 1rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    color: var(--white);
+    background-color: var(--black);
+    transition: all 0.5s ease;
+}
+.add-cart-btn img{
+    padding: 3px;
+    color: var(--black);
+    background-color: var(--yellow);
+}
+.add-cart-btn:hover{
+    color: var(--white);
+}
+.owl-carousel .owl-item img{
+    width: auto;
+}
+.box-product:hover .add-cart-btn{
+    opacity: 1;
+}
+.owl-nav button span{
+    font-size: 2rem;
+    color: var(--black);
+}
+/* ====================================== project work end=============================== */
+
+/* ====================================== Trusted icon work start=============================== */
+.trusted-banner{
+    background: url(./img/trustbg.png) no-repeat center;
+    background-size: cover;
+    padding: 100px 0;
+}
+.trust-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.trust-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    height: 130px;
+    width: 130px;
+    border-radius: 100px;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+.trust-img::before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    border-radius: 100px;
+    height: 80%;
+    width: 80%;
+    background-color: var(--white);
+    border-color: #cfcfcf;
+    border-style: dashed;
+}
+
+/* ====================================== Trusted icon work end=============================== */
+
+/* ====================================== Research work start=============================== */
+.research-banner{
+    background: url(./img/research.png) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 70px 0;
+}
+.text-research,.left-research{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.left-research{
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+}
+.image-left-res{
+    width: 100%;
+    height: auto;
+    padding: 180px 0;
+    background: url(./img/research-left.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+.date-no,.date-no-2{
+    top: 20px;
+    left: 20px;
+    position: absolute;
+    color: var(--white);
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--yellow);
+}
+.left-research h3{
+    font-weight: 400;
+    color: var(--dark-grey);
+}
+.left-research p{
+    font-size: 14px;
+    margin-bottom: 0;
+    line-height: 1.7;
+    font-weight: 300;
+    color: var(--p);
+}
+.read-more-btn{
+    color: var(--white);
+    background-color: var(--black);
+}
+.read-more-btn i{
+    color: var(--black);
+    background-color: var(--yellow);
+}
+.box-research{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.image-right-res{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+.img-rest-adj{
+    width: 70%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.date-no-2{
+    top: 10px;
+    left: 10px;
+    padding: 8px 5px;
+}
+
+.text-research-box h5, .text-research-box p{
+    font-weight: 430;
+}
+.text-research-box p{
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--p);
+}
+.text-research-box a{
+    height: 40px;
+    width: 40px;
+    color: var(--black);
+    border: 1px solid var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
+}
+/* ====================================== Research work end=============================== */
+
+/* ====================================== subscribe work start=============================== */
+.subs-banner{
+    background: url(./img/subsbanner.png) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 110px 0;
+}
+.subs-text{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.subs-text h2{
+    font-size: clamp(1.3rem , 6vw, 2.2rem);
+    font-weight: 400;
+    color: var(--white);
+}
+.subs-box{
+    all: unset;
+    background-color: var(--white);
+    height: 45.5px;
+    width: 43%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.subs-box input{
+    all: unset;
+    padding-left: 15px;
+}
+.subs-box input::placeholder{
+    color: #9F9F9F;
+}
+.subs-btn{
+    all: unset;
+    background-color: var(--yellow);
+    padding: .7rem 1rem;
+}
+
+/* ====================================== subscribe work end=============================== */
+
+/* ====================================== footer work start=============================== */
+footer{
+    background-color: #151515;
+    width: 100%;
+    height: auto;
+    padding: 80px 0;
+    margin-top: -2px;
+   
+}
+.left-foot,.link-foot-tag,.footer-links,.contact-foot{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.left-foot p,.location p{
+    margin-top: 1.5rem;
+    color: var(--white);
+    font-weight: 400;
+    line-height: 2;
+}
+.footer-links{
+    padding-left: 30px;
+}
+.footer-links h5{
+    font-weight: 400;
+    color: var(--yellow);
+    margin-bottom: 15px;
+}
+.link-foot-tag{
+    gap: 15px;
+}
+.link-foot-tag a{
+    letter-spacing: .7px;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--white);
+    transition: color 0.5s ease;
+}
+.link-foot-tag a:hover{
+    color: var(--yellow);
+}
+.location,.social-links{
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    justify-content: center;
+}
+.location i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    height: 30px;
+    width: 30px;
+    font-size: 13px;
+    border-radius: 100px;
+    color: var(--black);
+    background-color: var(--white);
+}
+.social-links{
+    gap: 20px;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--yellow);
+    font-size: 1.3rem;
+    transition: color 0.5s ease;
+}
+.social-links a:hover{
+    color: var(--white);
+}
+/* ====================================== footer work end=============================== */
+
+
+/* ====================================== copyright work start=============================== */
+.copyright{
+    border-top: 0.1px solid #ffffff08;
+    background-color: #151515;
+    padding: 1.2rem 0;
+}
+.text-copy{
+    display: flex;
+    align-items: center;
+}
+.text-copy:nth-child(2){
+    justify-content: flex-end;
+}
+.text-copy p{
+    letter-spacing: .5px;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--white);
+}
+/* ====================================== copyright work end=============================== */
+
+
+
+/* =============================Media queries for Mobile ========================= */
+@media (min-width: 769px) and (max-width: 1400px) {
+    .nav-links {
+        gap: 38px;
+    }
+    .image-right-res{
+        gap: 20px;
+    }
+    .footer-links{
+        padding-left: 0;
+    }
+}
+@media (min-width: 551px) and (max-width: 768px) {
+    .mobile-padding{
+        padding: 0 10px !important;
+    }
+    header{
+        padding: 1rem 1.2rem;
+    }
+    header .toggle-btn{
+        font-weight: 600;
+    }
+    .navigation{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .toggle-btn{
+        display: flex;
+    }
+    .nav-links{
+        position: absolute;
+        z-index: -1 !important;
+        top: 0%;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        padding-top: 70px;
+        background-color: var(--white);
+        flex-direction: column;
+        transition: all 0.5s ease;
+    }
+    .nav-links.active{
+        right: 0;
+    }
+    .image-right-res{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    /* .img-rest-adj{
+        width: auto;
+    } */
+    .footer-links{
+        padding-left: 0;
+    }
+}
+@media (max-width: 550px) {
+    .mobile-padding{
+        padding: 0 10px !important;
+    }
+
+    /* ======================= Navigation work start======================= */
+    header{
+        padding: 1rem 1.2rem;
+    }
+    header .toggle-btn{
+        font-weight: 600;
+    }
+    .navigation{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .toggle-btn{
+        display: flex;
+    }
+    .nav-links{
+        position: absolute;
+        z-index: -1 !important;
+        top: 0%;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        padding-top: 70px;
+        background-color: var(--white);
+        flex-direction: column;
+        transition: all 0.5s ease;
+    }
+    .nav-links.active{
+        right: 0;
+    }
+    /* ======================= Navigation work end======================= */
+
+    /*========================= Banner work start========================= */
+    .banner{
+        background:linear-gradient(0deg, rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(./img/banner.png) no-repeat center;
+    }
+
+    /*  ===========================Banner work end ===============================*/
+
+    /*  ===========================product work start ===============================*/
+    .layer-text{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+
+    /*  ===========================product work end ===============================*/
+
+    /*  ===========================Trust work start ===============================*/
+    .trusted-banner{
+        padding: 80px 0;
+    }
+    .trust-icon{
+        margin-bottom: 2rem;
+    }
+
+    
+    /*  ===========================Trust work end ===============================*/
+
+    /*  ===========================research work start ===============================*/
+    .box-research{
+        margin-top: 2rem;
+    }
+    .image-right-res{
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 25px;
+        margin-bottom: 1.5rem;
+    }
+
+
+
+    /*  ===========================research work end ===============================*/
+
+    /*  ==========================subscribe work start ===============================*/
+    .subs-text{
+        align-items: center;
+        justify-content: center;
+    }
+    .subs-box{
+        width: 100%;
+    }
+    /*  ==========================subscribe work end ===============================*/
+
+
+    /*  ==========================Footer work start ===============================*/
+    footer{
+        padding: 70px 0;
+    }
+    .footer-links{
+        padding-left: 0;
+        margin-bottom: 1rem;
+    }
+    .contact-foot{
+        align-items: center;
+        justify-content: center;
+    }
+    .social-links a{
+        font-size: 1.5rem;
+    }
+
+    /*  ==========================Footer work end ===============================*/
+
+    /*  ==========================copyright section work start ===============================*/
+    .text-copy{
+        align-items: center;
+        justify-content: center;
+    }
+    .text-copy:nth-child(2){
+        justify-content: center;
+
+    }
+
+    /*  ==========================copyright section work end ===============================*/
+
+}
