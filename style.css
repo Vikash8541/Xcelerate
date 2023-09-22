@@ -792,6 +792,7 @@ footer{
         padding: 70px 0;
     }
     .footer-links{
+        margin-top: 1rem;
         padding-left: 0;
         margin-bottom: 1rem;
     }
