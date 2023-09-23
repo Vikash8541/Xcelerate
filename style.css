@@ -254,8 +254,15 @@ header{
 }
 .layer-ser {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.layer-ser img{
+    font-size: 14px;
 }
 .layer-ser a{
+    font-size: clamp(14px,6vw,15px);
     margin-bottom: 0;
     color: var(--p);
     font-weight: 400;
@@ -345,6 +352,30 @@ header{
     font-size: 2rem;
     color: var(--black);
 }
+.owl-theme .owl-nav{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.owl-prev i{
+    position: absolute;
+    left: -50px;
+    font-size: 1.5rem;
+    
+}
+.owl-next i{
+    position: absolute;
+    right: -50px;
+    font-size: 1.5rem;
+}
+.owl-next:hover i,.owl-prev:hover i{
+    color: var(--black);
+    opacity: .5px;
+}
 /* ====================================== project work end=============================== */
 
 /* ====================================== Trusted icon work start=============================== */
@@ -383,7 +414,10 @@ header{
     border-color: #cfcfcf;
     border-style: dashed;
 }
-
+.trust-icon h5{
+    font-size: clamp(0.8rem, 6vw, 1rem);
+    text-align: center;
+}
 /* ====================================== Trusted icon work end=============================== */
 
 /* ====================================== Research work start=============================== */
@@ -638,10 +672,18 @@ footer{
 
 
 
-/* =============================Media queries for Mobile ========================= */
-@media (min-width: 769px) and (max-width: 1400px) {
+
+/* =============================Media queries for Laptop ========================= */
+@media (min-width: 769px) and (max-width: 1300px) {
     .nav-links {
-        gap: 38px;
+        gap: 22px;
+        justify-content: space-around;
+    }
+    .nav-links li a{
+        font-size: 12px;
+    }
+    .nav-links li .line::after{
+        right: -17px;
     }
     .image-right-res{
         gap: 20px;
@@ -649,7 +691,48 @@ footer{
     .footer-links{
         padding-left: 0;
     }
+    .cart-btn{
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: auto;
+    }
+    .cart-btn img{
+        height: 22px;
+        width: auto;
+    }
+    .layer-text{
+        gap: 15px;
+    }
+    .layer-ser a{
+        font-size: 12px;
+    }
+    .layer-ser::after{
+        right: -12px;
+    }
+    .image-right-res{
+        gap: 13px;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+    .img-rest-adj{
+        width: 100%;
+    }
+    .text-research-box h5{
+        font-size: 16px;
+    }
+    .text-research-box p{
+        font-size: 13px;
+    }
+    .footer-links{
+        padding-left: 0;
+    }
 }
+
+
+/* =============================Media queries for Tab ========================= */
 @media (min-width: 551px) and (max-width: 768px) {
     .mobile-padding{
         padding: 0 10px !important;
@@ -689,13 +772,41 @@ footer{
         align-items: flex-start;
         gap: 15px;
     }
-    /* .img-rest-adj{
-        width: auto;
-    } */
+    .left-research{
+        margin-bottom: 2rem;
+    }
+    .product-head{
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .services{
+        margin-bottom: 50px;
+    }
     .footer-links{
         padding-left: 0;
     }
+    .text-copy{
+        flex: 0 0 50%;
+    }
+    .footer-links{
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    .link-foot-tag{
+        align-items: center;
+        justify-content: center;
+    }
+    .contact-foot{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .box-item p{
+        font-size: 13px;
+    }
 }
+/* =============================Media queries for Mobile ========================= */
 @media (max-width: 550px) {
     .mobile-padding{
         padding: 0 10px !important;
